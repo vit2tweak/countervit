@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/svg+xml" href="/favicon.ico" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="A modern counter application built with React and TypeScript" />
+    <meta name="theme-color" content="#646cff" />
+    <meta name="author" content="CounterVit" />
+    
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="website" />
+    <meta property="og:title" content="CounterVit - Modern Counter App" />
+    <meta property="og:description" content="A simple, elegant counter application with persistent storage" />
+    
+    <!-- Twitter -->
+    <meta property="twitter:card" content="summary" />
+    <meta property="twitter:title" content="CounterVit - Modern Counter App" />
+    <meta property="twitter:description" content="A simple, elegant counter application with persistent storage" />
+    
+    <title>CounterVit - Modern Counter App</title>
+    
+    <style>
+      /* Prevent flash of unstyled content */
+      body {
+        margin: 0;
+        font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+          'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+          sans-serif;
+        -webkit-font-smoothing: antialiased;
+        -moz-osx-font-smoothing: grayscale;
+        background-color: #f5f5f5;
+      }
+      
+      #root {
+        min-height: 100vh;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+      }
+      
+      /* Loading spinner */
+      .loading {
+        display: inline-block;
+        width: 40px;
+        height: 40px;
+        border: 3px solid #f3f3f3;
+        border-top: 3px solid #646cff;
+        border-radius: 50%;
+        animation: spin 1s linear infinite;
+      }
+      
+      @keyframes spin {
+        0% { transform: rotate(0deg); }
+        100% { transform: rotate(360deg); }
+      }
+    </style>
+  </head>
+  <body>
+    <noscript>
+      <div style="text-align: center; padding: 2rem; font-family: Arial, sans-serif;">
+        <h2>JavaScript Required</h2>
+        <p>You need to enable JavaScript to run this app.</p>
+      </div>
+    </noscript>
+    
+    <div id="root">
+      <div class="loading" aria-label="Loading application"></div>
+    </div>
+    
+    <script type="module" src="/src/index.tsx"></script>
+  </body>
+</html>
